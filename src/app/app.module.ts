@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from "@angular/common/http";
@@ -23,6 +23,8 @@ import { StudentdashboardComponent } from './studentdashboard/studentdashboard.c
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    ReactiveFormsModule
+
     
 
   ],

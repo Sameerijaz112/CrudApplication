@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder,FormGroup } from "@angular/forms";
+import { FormBuilder,FormControl,FormGroup } from "@angular/forms";
 import { ApiService } from '../shared/api.service';
 import { StudentModel } from './student.model';
 
@@ -10,7 +10,12 @@ import { StudentModel } from './student.model';
 })
 export class StudentdashboardComponent { 
 
-studentValue:FormGroup|any
+  studentValue : FormGroup=new FormGroup({
+    Name: new FormControl(),
+    Class: new FormControl(),
+    Email: new FormControl(),
+    Password: new FormControl()
+  }); ;
 studentobj:StudentModel= new StudentModel;
 studentlist:any =[]
 
@@ -19,12 +24,7 @@ studentlist:any =[]
  constructor(private formbuilder:FormBuilder, private _api:ApiService,  ){}
 
  ngonit(): void {
-  this.studentValue = this.formbuilder.group({
-      Name:[''],
-    Class:[''],
-    Email:[''],
-    Password:[''],
-  });
+
   this.getstudent();
   
  }
