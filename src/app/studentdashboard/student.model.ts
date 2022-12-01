@@ -3,5 +3,5 @@ export class StudentModel{
     Name?:string;
     Class?:string;
     Email?:string;
-    Password?:number;
+    Password?:string;
 }

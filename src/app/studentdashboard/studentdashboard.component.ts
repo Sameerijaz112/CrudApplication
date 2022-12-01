@@ -10,31 +10,32 @@ import { StudentModel } from './student.model';
 })
 export class StudentdashboardComponent { 
 
-studentVal!:any
+studentValue:FormGroup|any
 studentobj:StudentModel= new StudentModel;
 studentlist:any =[]
 
 
 
- constructor(private formbuilder:FormBuilder, private api:ApiService){}
+ constructor(private formbuilder:FormBuilder, private _api:ApiService,  ){}
 
  ngonit(): void {
-  this.studentVal = this.formbuilder.group({
-    Name:[],
-    Class:[],
-    Email:[],
-    Password:[],
-  })
+  this.studentValue = this.formbuilder.group({
+      Name:[''],
+    Class:[''],
+    Email:[''],
+    Password:[''],
+  });
+  this.getstudent();
+  
  }
 
  Addstudent(){
-  this.studentobj.Name = this.studentVal.value.Name;
-  this.studentobj.Class = this.studentVal.value.Class;
-  this.studentobj.Email = this.studentVal.value.Email;
-  this.studentobj.Password = this.studentVal.value.Password;
-
-
-this.api.poststudent(this.studentobj).subscribe({next : (v) => {
+  
+  this.studentobj.Name = this.studentValue.value.Name;
+  this.studentobj.Class = this.studentValue.value.Class;
+  this.studentobj.Email = this.studentValue.value.Email;
+  this.studentobj.Password = this.studentValue.value.Password;  
+  this._api.poststudent(this.studentobj).subscribe({next : (v) => {
   console.log(v)
 },
 error: (e) => {
@@ -42,16 +43,17 @@ error: (e) => {
   alert("error")
 },
 complete:() => {
-  console.log("Student Record Added")
+  console.log("Student Record Added!")
   alert("Student Record Added")
   this.getstudent();
+  this.studentValue.reset();
 }
  
 })
 
  }
  getstudent(){
-  this.api.getstudent().subscribe(res => {
+  this._api.getstudent().subscribe(res => {
     this.studentlist = res;
   })
  }
