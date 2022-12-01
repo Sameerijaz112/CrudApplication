@@ -1,7 +1,40 @@
 {
   "posts": [
-
-    
+    {
+      "id": 1,
+      "Name": "dsd",
+      "Class": "12",
+      "Email": null,
+      "Password": null
+    },
+    {
+      "id": 2,
+      "Name": "dsfds",
+      "Class": null,
+      "Email": "fsd",
+      "Password": null
+    },
+    {
+      "id": 3,
+      "Name": "dasdas",
+      "Class": null,
+      "Email": null,
+      "Password": null
+    },
+    {
+      "id": 4,
+      "Name": "dwed",
+      "Class": null,
+      "Email": null,
+      "Password": null
+    },
+    {
+      "id": 5,
+      "Name": "Sameer",
+      "Class": "12",
+      "Email": "sameerejaz970@gmail.com",
+      "Password": null
+    }
   ],
   "comments": [],
   "profile": {
