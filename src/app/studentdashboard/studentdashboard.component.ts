@@ -36,11 +36,11 @@ studentlist:any =[]
   this.studentobj.Email = this.studentValue.value.Email;
   this.studentobj.Password = this.studentValue.value.Password;  
   this._api.poststudent(this.studentobj).subscribe({next : (v) => {
-  console.log(v)
+  console.log(v);
 },
 error: (e) => {
   console.log(e)
-  alert("Not Working")
+ 
 },
 complete:() => {
   console.log("Student Record Added!")
