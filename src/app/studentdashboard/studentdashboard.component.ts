@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder,FormControl,FormGroup } from "@angular/forms";
 import { ApiService } from '../shared/api.service';
@@ -21,11 +22,10 @@ studentlist:any =[]
 
 
 
- constructor(private formbuilder:FormBuilder, private _api:ApiService,  ){}
+ constructor(private formbuilder:FormBuilder, private _api:ApiService ){}
 
  ngonit(): void {
 
-  this.getstudent();
   
  }
 
@@ -40,7 +40,7 @@ studentlist:any =[]
 },
 error: (e) => {
   console.log(e)
-  alert("error")
+  alert("Not Working")
 },
 complete:() => {
   console.log("Student Record Added!")

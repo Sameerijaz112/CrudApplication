@@ -10,7 +10,7 @@ export class ApiService {
   constructor(private _http:HttpClient) { }
   // Post Get Put Delete Method //
   poststudent(data:any){
-    return this._http.post<any>("http://localhost:3000/posts", data).pipe(
+    return this._http.post<any>("http://localhost:3000/posts/", data).pipe(
       map(
         (res => {
           return res
@@ -19,7 +19,7 @@ export class ApiService {
     )
   }
   getstudent(){
-    return this._http.get<any>("http://localhost:3000/posts", ).pipe(
+    return this._http.get<any>("http://localhost:3000/posts/", ).pipe(
       map(
         (res => {
           return res
@@ -28,7 +28,7 @@ export class ApiService {
     )
   }
   putstudent(data:any,id:number){
-    return this._http.post<any>("http://localhost:3000/posts"+id, data).pipe(
+    return this._http.post<any>("http://localhost:3000/posts/"+id, data).pipe(
       map(
         (res => {
           return res
@@ -37,7 +37,7 @@ export class ApiService {
     )
   }
   deletestudent(id:number){
-    return this._http.delete<any>("http://localhost:3000/posts"+id).pipe(
+    return this._http.delete<any>("http://localhost:3000/posts/"+id).pipe(
       map(
         (res => {
           return res
