@@ -21,11 +21,13 @@
             <th>Email</th>
 
         </tr>
-        <tr>
-            <td>1</td>
-            <td>Sameer</td>
-            <td>12th</td>
-            <td>sameerejaz970@gmail.com</td>
+
+<tr *ngFor="let student of studentlist ">
+            <td>{{student.id}}</td>
+            <td>{{student.Name}}</td>
+            <td>{{student.Class}}</td>
+            <td>{{student.Email}}</td>
+
             <td>
                 <input data-bs-toggle="modal" data-bs-target="#staticBackdrop" type="button" value="Edit" class="btn btn-outline-dark"> 
                 <input type="button" value="Delete" class="btn btn-outline-danger sizechange"> 
