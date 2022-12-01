@@ -9,7 +9,7 @@ export class ApiService {
 
   constructor(private _http:HttpClient) { }
   // Post Get Put Delete Method //
-  poststudent(){
+  poststudent(data:any){
     return this._http.post<any>("http://localhost:3000/posts", data).pipe(
       map(
         (res => {
