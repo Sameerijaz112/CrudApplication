@@ -63,28 +63,28 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="staticBackdropLabel">Registration</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button"   class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <form>
+            <form [formGroup]="studentVal">
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Name</label> 
-                    <input type="email" class="form-control" id="textEmail" placeholder="Enter Your Name">
+                    <input type="email" formControlName = "Name" class="form-control" id="textName" placeholder="Enter Your Name">
                     
                   </div>
                   <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Class</label> 
-                    <input type="email" class="form-control" id="textEmail" placeholder="Enter Your Class">
+                    <input type="email" formControlName = "Class" class="form-control" id="textClass" placeholder="Enter Your Class">
                     
                   </div>
                 <div class="mb-3">
                   <label for="exampleInputPassword1" class="form-label">Email</label> 
-                  <input type="email" class="form-control" id="textEmail" placeholder="Enter Your Email id">
+                  <input type="email" formControlName = "Email" class="form-control" id="textEmail" placeholder="Enter Your Email id">
                   
                 </div>
                 <div class="mb-3">
                   <label for="exampleInputPassword1" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Your Password " >
+                  <input type="password" formControlName = "Password" class="form-control" id="exampleInputPassword1" placeholder="Enter Your Password " >
                 </div>
               
                 
