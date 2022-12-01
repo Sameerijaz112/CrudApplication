@@ -1,19 +1,7 @@
 {
   "posts": [
-    {
-      "id": 1,
-      "Name": "Sameer",
-      "Class": "12th",
-      "Email": "sameerejaz970@gmail.com",
-      "Password": null
-    },
-    {
-      "id": 2,
-      "Name": "Ali",
-      "Class": "7th",
-      "Email": "sameerejaz970@gmail.com",
-      "Password": null
-    }
+
+    
   ],
   "comments": [],
   "profile": {
