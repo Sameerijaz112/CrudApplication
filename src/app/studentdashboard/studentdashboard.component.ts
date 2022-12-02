@@ -69,7 +69,7 @@ complete:() => {
     console.log("Student Record Delete!")
     alert("Student Record Delete")
     this.getstudent();
-    this.studentValue.reset();
+
   }
    
   }

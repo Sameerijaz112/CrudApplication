@@ -6,22 +6,9 @@
       "Class": null,
       "Email": null,
       "Password": null
-    },
-    {
-      "id": 2,
-      "Name": "Sameer",
-      "Class": "12",
-      "Email": "sameerejaz970@gmail.com",
-      "Password": null
     }
   ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
+  "comments": [],
   "profile": {
     "name": "typicode"
   }
