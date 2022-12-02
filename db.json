@@ -1,5 +1,13 @@
 {
-  "posts": [],
+  "posts": [
+    {
+      "id": 1,
+      "Name": "Sameer",
+      "Class": "12",
+      "Email": null,
+      "Password": null
+    }
+  ],
   "comments": [],
   "profile": {
     "name": "typicode"
