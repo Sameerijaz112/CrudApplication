@@ -15,14 +15,14 @@
 
     <thead>
         <tr>
-            <th>id</th>
-            <th>Name</th>
-            <th>Class</th>
-            <th>Email</th>
+            <th class="changecolor">id</th>
+            <th class="changecolor">Name</th>
+            <th class="changecolor">Class</th>
+            <th class="changecolor">Email</th>
 
         </tr>
 
-<tr *ngFor="let student of studentlist ">
+<tr *ngFor="let student of studentlist " class="sizeequal" >
             <td>{{student.id}}</td>
             <td>{{student.Name}}</td>
             <td>{{student.Class}}</td>
@@ -71,10 +71,10 @@
                   <input type="email" formControlName="Email" class="form-control" id="textEmail" placeholder="Enter Your Email id">
                   
                 </div>
-                <div class="mb-3">
+             <!--    <div class="mb-3">
                   <label for="exampleInputPassword1" class="form-label">Password</label>
                   <input type="password" formControlName="Password" class="form-control" id="exampleInputPassword1" placeholder="Enter Your Password " >
-                </div>
+                </div> -->
               
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
