@@ -76,4 +76,14 @@ complete:() => {
     
   )
  }
+ editstudent(data:any){
+
+ this.studentValue.controls["Name"].setValue(data.Name);
+ this.studentValue.controls["Class"].setValue(data.Class);
+ this.studentValue.controls["Email"].setValue(data.Email);
+ this.studentValue.controls["Password"].setValue(data.Password);
+ this.studentobj.id = data.id;
+
+ }
+
 }
