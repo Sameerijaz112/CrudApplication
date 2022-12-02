@@ -1,6 +1,19 @@
 {
   "posts": [
-   
+    {
+      "id": 1,
+      "Name": "Sameer",
+      "Class": null,
+      "Email": null,
+      "Password": null
+    },
+    {
+      "id": 2,
+      "Name": "Sameer",
+      "Class": "12",
+      "Email": "sameerejaz970@gmail.com",
+      "Password": null
+    }
   ],
   "comments": [
     {
