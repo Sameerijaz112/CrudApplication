@@ -28,7 +28,7 @@ export class ApiService {
     )
   }
   putstudent(data:any,id:number){
-    return this._http.post<any>("http://localhost:3000/posts/"+id, data).pipe(
+    return this._http.put<any>("http://localhost:3000/posts/"+id, data).pipe(
       map(
         (res => {
           return res
