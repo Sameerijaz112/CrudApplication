@@ -57,4 +57,23 @@ complete:() => {
     this.studentlist = res;
   })
  }
+ deletestudent(data:any){
+  this._api.deletestudent(data.id).subscribe({next : (v) => {
+    console.log(v);
+  },
+  error: (e) => {
+    console.log(e)
+   
+  },
+  complete:() => {
+    console.log("Student Record Delete!")
+    alert("Student Record Delete")
+    this.getstudent();
+    this.studentValue.reset();
+  }
+   
+  }
+    
+  )
+ }
 }
