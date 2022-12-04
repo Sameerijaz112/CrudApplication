@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormBuilder,FormControl,FormGroup } from "@angular/forms";
 import { ApiService } from '../shared/api.service';
 import { StudentModel } from './student.model';
+import { ToastrService } from "ngx-toastr";
 
 @Component({
   selector: 'app-studentdashboard',
@@ -24,11 +25,10 @@ buttonupdate : boolean = false
 
 
 
- constructor(private formbuilder:FormBuilder, private _api:ApiService ){}
+ constructor(private formbuilder:FormBuilder, private _api:ApiService, Toster:ToastrService){}
 
  ngonit(): void {
 
-  
  }
 
  Addstudent(){
@@ -47,6 +47,8 @@ error: (e) => {
 complete:() => {
   console.log("Student Record Added!")
   alert("Student Record Added")
+  
+  
   this.getstudent();
   this.studentValue.reset();
 }

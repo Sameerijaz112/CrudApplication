@@ -2,14 +2,7 @@
   "posts": [
     {
       "id": 2,
-      "Name": "Sameer ijaz",
-      "Class": "12",
-      "Email": "sameerejaz970@gmail.com",
-      "Password": null
-    },
-    {
-      "id": 3,
-      "Name": "dsd",
+      "Name": "Sameer",
       "Class": null,
       "Email": null,
       "Password": null
