@@ -15,7 +15,7 @@ export class StudentdashboardComponent {
   studentValue : FormGroup=new FormGroup({
     Name: new FormControl(),
     Class: new FormControl(),
-    Email: new FormControl(),
+    Email: new FormControl(), 
     Password: new FormControl()
   }); ;
 studentobj:StudentModel= new StudentModel;
