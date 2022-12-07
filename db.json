@@ -1,9 +1,16 @@
 {
   "posts": [
     {
-      "id": 2,
+      "id": 1,
       "Name": "Sameer",
       "Class": null,
+      "Email": null,
+      "Password": null
+    },
+    {
+      "id": 2,
+      "Name": "Sameer",
+      "Class": "12",
       "Email": null,
       "Password": null
     },
