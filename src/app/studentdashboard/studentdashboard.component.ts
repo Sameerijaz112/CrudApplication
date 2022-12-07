@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnChanges, SimpleChanges } from '@angular/core';
 import { FormBuilder,FormControl,FormGroup } from "@angular/forms";
 import { ApiService } from '../shared/api.service';
 import { StudentModel } from './student.model';
@@ -12,7 +12,7 @@ import { ToastrService } from "ngx-toastr";
   templateUrl: './studentdashboard.component.html',
   styleUrls: ['./studentdashboard.component.css']
 })
-export class StudentdashboardComponent { 
+export class StudentdashboardComponent implements OnChanges { 
 
   studentValue : FormGroup=new FormGroup({
     Name: new FormControl(),
@@ -27,9 +27,14 @@ buttonupdate : boolean = false
 
 
 
- constructor(private formbuilder:FormBuilder, private _api:ApiService, Toster:ToastrService){}
+ constructor(private formbuilder:FormBuilder, private _api:ApiService, Toster:ToastrService,private http:HttpClient){}
+  ngOnChanges(changes: SimpleChanges): void {
+    
+    throw new Error('Method not implemented.');
+  }
 
  ngonit(): void {
+
 
  }
 
