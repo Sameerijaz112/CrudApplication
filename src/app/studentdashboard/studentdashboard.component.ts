@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnChanges, SimpleChanges } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder,FormControl,FormGroup } from "@angular/forms";
 import { ApiService } from '../shared/api.service';
 import { StudentModel } from './student.model';
@@ -12,29 +12,24 @@ import { ToastrService } from "ngx-toastr";
   templateUrl: './studentdashboard.component.html',
   styleUrls: ['./studentdashboard.component.css']
 })
-export class StudentdashboardComponent implements OnChanges { 
+export class StudentdashboardComponent  { 
 
   studentValue : FormGroup=new FormGroup({
     Name: new FormControl(),
     Class: new FormControl(),
     Email: new FormControl(), 
     Password: new FormControl()
-  }); ;
+  })
 studentobj:StudentModel= new StudentModel;
 studentlist:any =[]
-buttononsave : boolean =true
-buttonupdate : boolean = false
 
 
 
- constructor(private formbuilder:FormBuilder, private _api:ApiService, Toster:ToastrService,private http:HttpClient){}
-  ngOnChanges(changes: SimpleChanges): void {
-    
-    throw new Error('Method not implemented.');
-  }
 
- ngonit(): void {
+ constructor(private formbuilder:FormBuilder, private _api:ApiService, Toster:ToastrService,){}
 
+ ngOnInit(): void {
+this.getstudent();
 
  }
 
@@ -94,7 +89,7 @@ complete:() => {
  this.studentValue.controls["Email"].setValue(data.Email);
  this.studentValue.controls["Password"].setValue(data.Password);
  this.studentobj.id = data.id;
- this.showsupdate();
+
  }
  Updatestudent(){
    
@@ -114,20 +109,13 @@ complete:() => {
   alert("Student Record Updated")
   this.getstudent();
   this.studentValue.reset();
-  this.showssave();
+
   this.studentobj.id = 0
 }
  
 })
 }
-showssave(){
-  this.buttononsave = true;
-  this.buttonupdate = false;
-}
-showsupdate(){
-  this.buttononsave = false;
-  this.buttonupdate = true;
-}
+
 
 
 }
